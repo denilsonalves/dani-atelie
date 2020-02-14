@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+
+:root {
+  --primary-color: #0b0c10;
+  --secondary-color: #1f2833;
+  --tertiary-color: #c5c6c7;
+  --quaternary-color: #66fcf1;
+  --quinary-color: #45a29e;
+  --senary-color: #501f3a;
+  --septenary-color: #cb2d6f;
+  --octonary-color: #0f292f;
+  --nonary-color: #542f34;
+  --denary-color: #fef9c7;
+  --logo-catalogo-color: #764a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  border: none;
+
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary-color);
+  /* background-color: #764a1a; */
+}
+
+.container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: var(--quinary-color);
+  color: var(--primary-color);
+  border-radius: 5px;
+  width: 100%;
+
+  /* border: 2px solid var(--quaternary-color); */
+
+  display: block;
+  margin: 16px 0;
+  padding: 12px 16px;
+
+  /* alinha os botões para baixo */
+  align-self: end;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: var(--quaternary-color);
+}
+
+.button.edit {
+  background-color: var(--denary-color);
+}
+
+.button.edit:hover {
+  background-color: #f1ff2b;
+}
+
+.button.delete {
+  background-color: var(--senary-color);
+}
+
+.button.delete:hover {
+  background-color: var(--septenary-color);
+}
+
+/* Header and Footer */
+header,
+footer {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+
+  width: 100%;
+  padding: 32px 0;
+
+  text-align: center;
+}
+
+header div.container {
+  display: grid;
+  grid-template-columns: 220px auto 280px;
+  align-items: center;
+  grid-gap: 24px;
+}
+
+@media (max-width: 800px) {
+  header div.container {
+    grid-template-columns: 1fr;
+  }
+}
+
+header div.container a {
+  justify-self: start;
+}
+
+/* Marca - Logo */
+.logo h1 {
+  color: var(--quinary-color);
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 1px;
+}
+
+.logo h2 {
+  color: var(--quaternary-color);
+  font-size: 24;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+
+/* Busca Header */
+.search input {
+  width: 100%;
+  min-width: 150px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Menu bar */
+nav.primary ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.primary ul li a {
+  display: flex;
+  align-items: center;
+  color: var(--tertiary-color);
+  transition: 400ms;
+}
+
+nav.primary ul li a:hover {
+  color: var(--quaternary-color);
+  transition: 400ms;
+}
+
+nav.primary ul li a i {
+  margin-right: 8px;
+}
+
+/* Formulário do Produto */
+
+section.form {
+  /* background-color: var(--octonary-color); */
+  color: var(--tertiary-color);
+
+  padding: 32px 24px;
+  margin: 8px auto;
+
+  /* border: 2px solid #efefef; */
+  border-radius: 4px;
+
+  max-width: 1000px;
+  width: 90%;
+}
+
+section.form .header h3 {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  font-weight: bold;
+  color: var(--quaternary-color);
+
+  margin-bottom: 16px;
+}
+
+form .input-group {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto 110px 110px 115px;
+}
+@media (max-width: 800px) {
+  form .input-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+form .item {
+  margin-bottom: 16px;
+}
+
+form .item > div:nth-child(1) {
+  color: var(--quinary-color);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+form .item input[type="number"],
+form .item input[class="amount"] {
+  text-align: right;
+}
+
+form .item input[type="text"],
+form .item input[type="number"],
+form .item textarea,
+form .item select {
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+form .item select {
+  /* Retirar o css padrão dos navegadores */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* adicionando o icone */
+  background-image: url("https://img.icons8.com/material-sharp/24/000000/expand-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 0.7em top 50%;
+}
+
+form .item textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+form .fields {
+  margin-bottom: 40px;
+}
+
+form .item span {
+  /* padding: 4px 16px; */
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  color: var(--tertiary-color);
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+/* Uploads das fotos */
+form .item #photos-upload {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  width: 200px;
+}
+
+form .item #photos-upload p {
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px -6px #c5c6c7;
+  background-color: #45a29e;
+  color: #0b0c10;
+
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+form .item #photos-upload p:hover {
+  background-color: #66fcf1;
+}
+
+form .item #photos-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+form .item #photos-preview {
+  display: grid;
+
+  /* definindo 3 colunas de tamanho flexível */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  width: 100%;
+  margin: 8px 0;
+}
+@media (max-width: 650px) {
+  form .item #photos-preview {
+    grid-template-columns: 1fr;
+  }
+}
+/* diminuindo a tamanho das fotos */
+form .item #photos-preview img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+#photos-preview .photo {
+  position: relative;
+}
+
+#photos-preview .photo i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--septenary-color);
+  color: var(--primary-color);
+  transition: all 0.2s;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+
+  /* width: 100%;
+  height: 100%;
+
+  display: ; */
+}
+
+#photos-preview .photo:hover i {
+  opacity: 1;
+}
